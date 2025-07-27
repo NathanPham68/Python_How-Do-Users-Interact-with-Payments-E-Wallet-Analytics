@@ -1,5 +1,7 @@
 # 📊 E-wallet Data Analysis
 
+<img width="745" height="498" alt="image" src="https://github.com/user-attachments/assets/df5f5775-3425-467c-b17a-f8c5b24aa884" />
+
 ## Overview
 This project simulates the responsibilities of a Data Analyst (DA) working at an e-wallet company. The objective is to analyze and understand the current state of payments and transactions in the context of an e-wallet ecosystem using real-world-like datasets.
 
