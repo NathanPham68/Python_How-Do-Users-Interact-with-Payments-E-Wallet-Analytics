@@ -5,10 +5,10 @@
 ## Overview
 This project simulates the responsibilities of a Data Analyst (DA) working at an e-wallet company. The objective is to analyze and understand the current state of payments and transactions in the context of an e-wallet ecosystem using real-world-like datasets.
 
-🔍 **Goal:**
+### 🔍 **Goal:**
 To uncover insights about payment behaviors and transaction patterns that can inform business decisions, identify anomalies, and highlight performance trends across products and teams.
 
-📁 **Datasets**
+### 📁 **Datasets**
 
 [**Link to Datasets**](https://drive.google.com/drive/folders/1Mv9Mk9DgKKVlJX_aVvYDTZnck3cHIJuV?usp=sharing)
 
@@ -20,7 +20,7 @@ The project uses the following CSV files:
 
 * transactions.csv – Transaction-level data, including transaction types and merchant information.
 
-🧠 **Problem-Solving Mindset (Step-by-Step Guide)**
+### 🧠 **Problem-Solving Mindset (Step-by-Step Guide)**
 
 Each exercise follows a logical approach that you can use when solving any Python problem:
 
@@ -57,7 +57,7 @@ Each exercise follows a logical approach that you can use when solving any Pytho
 9. Refactor if Needed
 → Improve readability, fix bugs, or optimize performance
 
-🛠️ **Tools Used**
+### 🛠️ **Tools Used**
 
 - Python
 
@@ -296,5 +296,11 @@ transactions
 <img width="1283" height="567" alt="image" src="https://github.com/user-attachments/assets/5696eb8a-43c1-4bdf-9a33-b6d14e968c6d" />
 
 <img width="1283" height="581" alt="image" src="https://github.com/user-attachments/assets/5e6aeb73-2e3c-4d04-87c6-c3fa44ec9c89" />
+
+## 🤝 **Contributing**
+
+Feel free to fork this repo and add more beginner-friendly exercises or suggest improvements to existing ones. 
+
+Collaboration is welcome!
 
 
