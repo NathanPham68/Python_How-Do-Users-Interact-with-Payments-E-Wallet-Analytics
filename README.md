@@ -1,4 +1,4 @@
-# 📊 E-wallet Data Analysis
+# 📊 [Python] How Do Users Interact with Payments? | E-Wallet Analytics
 
 <img width="745" height="498" alt="image" src="https://github.com/user-attachments/assets/df5f5775-3425-467c-b17a-f8c5b24aa884" />
 
