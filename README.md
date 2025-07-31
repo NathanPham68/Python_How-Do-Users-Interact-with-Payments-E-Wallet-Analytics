@@ -5,7 +5,7 @@
 ## Overview
 This project simulates the responsibilities of a Data Analyst (DA) working at an e-wallet company. The objective is to analyze and understand the current state of payments and transactions in the context of an e-wallet ecosystem using real-world-like datasets.
 
-### 🔍 **Goal:**
+### 🔍 **Goal**
 To uncover insights about payment behaviors and transaction patterns that can inform business decisions, identify anomalies, and highlight performance trends across products and teams.
 
 ### 📁 **Datasets**
