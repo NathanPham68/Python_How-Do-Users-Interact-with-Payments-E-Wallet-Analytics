@@ -2,11 +2,33 @@
 
 <img width="745" height="498" alt="image" src="https://github.com/user-attachments/assets/df5f5775-3425-467c-b17a-f8c5b24aa884" />
 
-## Overview
+## 📑 Table of Contents
+
+1. [📖 Overview](#overview)
+
+2. [📚 Import libraries & data](#import-libraries-&-data)
+
+3. [🧪 Part I: Exploratory Data Analysis (EDA)](#Part-I:-Exploratory-Data-Analysis-(EDA))
+
+4. [🧹 Part II: Data Wrangling & Analysis](#Part-II:-Data-Wrangling-&-Analysis)
+
+5. [🤝 Contributing](#Contributing)
+
+## 📖 **Overview**
+
 This project simulates the responsibilities of a Data Analyst (DA) working at an e-wallet company. The objective is to analyze and understand the current state of payments and transactions in the context of an e-wallet ecosystem using real-world-like datasets.
 
 ### 🔍 **Goal**
+
 To uncover insights about payment behaviors and transaction patterns that can inform business decisions, identify anomalies, and highlight performance trends across products and teams.
+
+### 👤 **Who is this project for?**
+
+- Data analysts & business analysts
+
+- Decision-makers & stakeholders in the fintech industry
+
+- Product teams optimizing e-wallet services
 
 ### 📁 **Datasets**
 
@@ -14,11 +36,52 @@ To uncover insights about payment behaviors and transaction patterns that can in
 
 The project uses the following CSV files:
 
-* payment_report.csv – Monthly payment volumes for various products.
+<details>
+  <summary><strong>Table 1: Products</strong></summary>
 
-* product.csv – Product details including product ID, team ownership, category, etc.
+* product.csv (493 rows × 3 columns) – Product details including product ID, team ownership, category, etc.
 
-* transactions.csv – Transaction-level data, including transaction types and merchant information.
+| Column Name  | Data Type | Description |
+|-------------|----------|-------------|
+| product_id  | INT      | Unique identifier for each product |
+| category    | TEXT     | Product category |
+| team_own    | TEXT     | Team responsible for the product |
+
+</details>
+
+<details>
+  <summary><strong>Table 2: Payment Report</strong></summary>
+
+* payment_report.csv (920 rows × 5 columns) – Monthly payment volumes for various products.
+
+| Column Name    | Data Type | Description |
+|---------------|----------|-------------|
+| report_month  | DATE     | Month of the payment report |
+| payment_group | TEXT     | Type of payment (e.g., refund, purchase) |
+| product_id    | INT      | Associated product ID |
+| source_id     | INT      | Source of the transaction |
+| volume        | FLOAT    | Total payment volume |
+
+</details>
+
+<details>
+  <summary><strong>Table 3: Transactions</strong></summary>
+
+* transactions.csv (1,324,002 rows × 9 columns) – Transaction-level data, including transaction types and merchant information.
+
+| Column Name    | Data Type | Description |
+|---------------|----------|-------------|
+| transaction_id | INT      | Unique transaction identifier |
+| merchant_id    | INT      | Merchant involved in the transaction |
+| volume         | FLOAT    | Transaction amount |
+| transType      | INT      | Type of transaction |
+| transStatus    | TEXT     | Status of the transaction (e.g., completed, failed) |
+| sender_id      | INT      | Sender of the transaction |
+| receiver_id    | INT      | Receiver of the transaction |
+| extra_info     | TEXT     | Additional details about the transaction |
+| timeStamp      | TIMESTAMP | Time when the transaction occurred |
+
+</details>
 
 ### 🧠 **Problem-Solving Mindset (Step-by-Step Guide)**
 
@@ -186,6 +249,8 @@ t_report.to_notebook_iframe()
 
 ### ✔️ Q1. Top 3 product_ids with the highest volume
 
+Find the top 3 products with the highest revenue to identify which products are generating the most income. This helps in focusing on the highest-performing products for sales and marketing strategies.
+
 ```ruby
 payment_enriched_cleaned1 = payment_report_enriched
 payment_enriched_cleaned1[['product_id','source_id']]=payment_enriched_cleaned1[['product_id','source_id']].astype(str)
@@ -206,15 +271,21 @@ top3_product
 
 ### ✔️ Q2. Given that 1 product_id is only owed by 1 team, are there any abnormal products against this rule?
 
+Check whether each product is managed by a single team to ensure clear ownership and avoid potential conflicts in responsibility.
+
 <img width="1283" height="294" alt="image" src="https://github.com/user-attachments/assets/2267bf9a-ec8e-49f2-a6e9-3b44aaac04a6" />
 
 ### ✔️ Q3. Find the team has had the lowest performance (lowest volume) since Q2.2023. Find the category that contributes the least to that team.
+
+Identify the team with the lowest performance in terms of total transaction volume since Q2 2023. Once the lowest-performing team is found, determine the product category that contributes the least to that team's total volume. This analysis helps pinpoint underperforming teams and categories, providing insights for potential improvements or strategic decisions.
 
 <img width="1283" height="617" alt="image" src="https://github.com/user-attachments/assets/7afc4fe6-6aad-4259-83f2-7be08fd6d28b" />
 
 <img width="1283" height="628" alt="image" src="https://github.com/user-attachments/assets/d5a077e2-d99a-4f8e-9108-3880e077ac2d" />
 
 ### ✔️ Q4. Find the contribution of source_ids of refund transactions (payment_group = ‘refund’), what is the source_id with the highest contribution?
+
+The goal is to analyze the distribution of refund transactions across different source_ids and identify which source_id has the highest contribution. This helps in understanding refund patterns and potential areas for improvement.
 
 <img width="1283" height="307" alt="image" src="https://github.com/user-attachments/assets/f5402804-ba76-4268-9dfd-d145cbe8b08f" />
 
@@ -233,6 +304,8 @@ top3_product
 - transType = 8 & others merchant_id: Split Bill Transaction
 
 - Remained cases are invalid transactions
+
+The purpose of this task is to categorize each transaction into a specific transaction type based on the given conditions. By doing so, we can clearly identify the type of each transaction in the dataset, which helps in analyzing and understanding transaction patterns, processing specific transactions, and detecting any anomalies or invalid transactions.
 
 ```ruby
 def define_transaction_type(row):
@@ -262,7 +335,7 @@ transactions['transaction_type'] = transactions.apply(define_transaction_type, a
 
 <img width="1283" height="535" alt="image" src="https://github.com/user-attachments/assets/0464071d-da38-4ad0-9b2e-60780553ac71" />
 
-* Another method
+📝 **Another method**
 
 ```ruby
 conditions = [
@@ -292,6 +365,8 @@ transactions
 <img width="1283" height="491" alt="image" src="https://github.com/user-attachments/assets/c15e3061-ab66-4e73-bae0-fb5059dd96ca" />
 
 ### ✔️ Q6. Of each transaction type (excluding invalid transactions): find the number of transactions, volume, senders and receivers
+
+This helps in understanding the distribution of transactions across different types, as well as the engagement of unique senders and receivers for each type of transaction.
 
 <img width="1283" height="567" alt="image" src="https://github.com/user-attachments/assets/5696eb8a-43c1-4bdf-9a33-b6d14e968c6d" />
 
