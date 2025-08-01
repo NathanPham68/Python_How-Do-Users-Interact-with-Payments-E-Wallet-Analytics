@@ -8,9 +8,9 @@
 
 2. [📚 Import libraries & data](#import-libraries-&-data)
 
-3. [🧪 Part I: Exploratory Data Analysis (EDA)](#Part-I:-Exploratory-Data-Analysis-(EDA))
+3. [🧪 Part I: Exploratory Data Analysis (EDA)](#part-i:-exploratory-data-analysis-(eda))
 
-4. [🧹 Part II: Data Wrangling & Analysis](#Part-II:-Data-Wrangling-&-Analysis)
+4. [🧹 Part II: Data Wrangling & Analysis](#part-ii:-data-wrangling-&-analysis)
 
 5. [🤝 Contributing](#Contributing)
 
